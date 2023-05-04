@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: monitoringtools
+  labels:
+    app: eksvm
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: eksvm
+  template:
+    metadata:
+      labels:
+        app: eksvm
+    spec:
+      containers:
+        - name: demoecr
+          image: 709579612523.dkr.ecr.us-east-1.amazonaws.com/demoecr:1.0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
