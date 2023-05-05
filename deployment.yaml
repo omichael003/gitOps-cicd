@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: demoecr
-          image: 709579612523.dkr.ecr.us-east-1.amazonaws.com/demoecr:1.0
+          image: 709579612523.dkr.ecr.us-east-1.amazonaws.com/demoecr:1.2
           imagePullPolicy: Always
           ports:
             - containerPort: 5000
